@@ -18,6 +18,8 @@
 \usepackage{booktabs}
 \usepackage{minted}
 \usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{makecell}
 
 \newcommand{\comment}[1]{\textcolor{blue}{\emph{#1}}}  %% use of the colour and you can see how to use commands with parts \comment{so what}
 
@@ -54,18 +56,19 @@
 
 \tableofcontents
 \listoffigures
-%\listoftables
+\listoftables
 %\listoflistings
 
 \input{inc/introduction}
-\input{inc/methods}
+\input{inc/groupCreation.tex}
 \input{inc/results}
 \input{inc/discussion}
+\input{inc/reflections.tex}
 \input{inc/conclusion}
 
 
 \bibliographystyle{ntnuthesis/ntnubachelorthesis}
-\bibliography{inc/BachelorExample}
+\bibliography{inc/ref}
 
 \appendix %after this line all chapters will have letters instead of numbers
 % spreadsheet data?

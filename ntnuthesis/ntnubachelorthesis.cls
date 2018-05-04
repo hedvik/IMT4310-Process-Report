@@ -99,8 +99,6 @@
 \def\thesis@authorC{}
 \def\thesis@authorD{}
 \def\thesis@authorE{}
-\def\thesis@supervisor{}
-\def\thesis@supervisorA{}
 \def\thesis@oppdragsgiver{}
 
 \def\nmt@keywords{}
@@ -126,8 +124,6 @@
 \def\thesisauthorC#1{\def\thesis@authorC{#1}}
 \def\thesisauthorD#1{\def\thesis@authorD{#1}}
 \def\thesisauthorE#1{\def\thesis@authorE{#1}}
-\def\thesissupervisor#1{\def\thesis@supervisor{#1}}
-\def\thesissupervisorA#1{\def\thesis@supervisorA{#1}}
 \def\nmtoppdragsgiver#1{\def\thesis@oppdragsgiver{#1}}
 
 \def\thesisHostInstitution#1{\def\thesis@hostInstitution{#1}}
@@ -398,8 +394,7 @@ Use $\backslash$useyear\{<year>\} to set year.
 
 	\newcommand\nmt@DepartmentNameText{}
 	\newcommand\nmt@IDI{
-		Department of Computer Science\\
-		\NTNU, 
+		\NTNU 
 		}
 	\newcommand\nmt@IIK{
 			Department of Information Security and Communication Technology\\
@@ -417,7 +412,6 @@ Use $\backslash$useyear\{<year>\} to set year.
   \newcommand\nmt@BIT{Bachelor in Information Technology}
   \newcommand\nmt@BABED{IT-supported Business Architecture}
   \newcommand\nmt@AuthorText{Authors}
-	\newcommand\nmt@SupervisorText{Supervisor(s)}
 \newcommand\thesis@titlehead{\thesis@title}	
 
 
@@ -444,7 +438,6 @@ Use $\backslash$useyear\{<year>\} to set year.
   \renewcommand\nmt@BABED{Bachelor i IT-støttet bedriftsutvikling}
 
   \renewcommand\nmt@AuthorText{Forfattere}
-	\renewcommand\nmt@SupervisorText{Veileder}
 	
 	\renewcommand\thesis@titlehead{\thesis@titleNOR}
 
@@ -474,7 +467,6 @@ Use $\backslash$useyear\{<year>\} to set year.
   \renewcommand\nmt@BABED{Bachelor i IT-støttet bedriftsutvikling}
 
   \renewcommand\nmt@AuthorText{Forfattere}
-	\renewcommand\nmt@SupervisorText{Veileder}
 
    \@englishfalse 
    \@nynorsktrue
@@ -629,10 +621,9 @@ Use $\backslash$useyear\{<year>\} to set year.
 	
 	\vspace*{\fill}
 	{\fontsize{14}{16}\selectfont{	
-	\nmt@SupervisorText
+	
   }
-	\hspace*{21.5mm}{	\thesis@supervisor\\
-		 \thesis@supervisorA\\ \par}}
+	\hspace*{21.5mm}{\par}}
 		
   \end{titlepage}
 
@@ -658,14 +649,11 @@ Use $\backslash$useyear\{<year>\} to set year.
 		& \thesis@authorD\\
 		& \thesis@authorE\\
 		&\\
-	Supervisor: & \thesis@supervisor\\
-		& \thesis@supervisorA\\
 	Contact Person: & \nmt@contact\\
 		&\\
 	Keywords: & \nmt@keywords\\
 	Pages: & \pageref{LastPage}\\
 	Attachments: & \nmt@appnumber\\
-	Availability: & Open???\\ % this needs updating to use \nmt@pub}\\
 		&\\
 	\hline\\
 	Abstract: & \nmt@desc\\
